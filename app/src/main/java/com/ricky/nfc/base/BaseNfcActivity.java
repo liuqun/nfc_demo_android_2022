@@ -1,9 +1,11 @@
 package com.ricky.nfc.base;
 
+import android.annotation.SuppressLint;
 import android.app.PendingIntent;
 import android.content.Intent;
 import android.nfc.NfcAdapter;
-import android.support.v7.app.AppCompatActivity;
+import androidx.appcompat.app.AppCompatActivity;
+
 /**
  * Author:Created by Ricky on 2017/8/25.
  * Email:584182977@qq.com
@@ -21,6 +23,7 @@ public class BaseNfcActivity extends AppCompatActivity {
      * onCreat->onStart->onResume->onPause->onStop->onDestroy
      * 启动Activity，界面可见时.
      */
+    @SuppressLint("UnspecifiedImmutableFlag")
     @Override
     protected void onStart() {
         super.onStart();
